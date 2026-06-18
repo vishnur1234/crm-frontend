@@ -47,7 +47,7 @@ export default function TaskDetail() {
   }
 
   const project = projects.find(p => p.id === task.projectId);
-  const assignee = users.find(u => u.id === task.assignedTo);
+  const assignee = users.find(u => u.id === task.assignedTo || u.name === task.assignedTo);
   const userMap = Object.fromEntries(users.map(u => [u.id, u]));
 
   const handleStatusToggle = () => {

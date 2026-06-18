@@ -143,7 +143,7 @@ export default function TaskList() {
   const projectMap = Object.fromEntries(projects.map(p => [p.id, p.name || p.projectName || 'Unnamed Project']));
   const userMap = Object.fromEntries(users.map(u => [u.id, u]));
 
-  const myTasks = isAdmin ? tasks : tasks.filter(t => t.assignedTo === user?.id);
+  const myTasks = isAdmin ? tasks : tasks.filter(t => t.assignedTo === user?.id || t.assignedTo === user?.name);
 
   const filtered = myTasks.filter(t => {
     if (filterStatus !== 'All' && t.status !== filterStatus) return false;
@@ -198,7 +198,7 @@ export default function TaskList() {
         ) : (
           <div className="divide-y divide-slate-700/50">
             {filtered.map(task => {
-              const assignee = userMap[task.assignedTo];
+              const assignee = userMap[task.assignedTo] || users.find(u => u.name === task.assignedTo);
               return (
                 <div
                   key={task.id}

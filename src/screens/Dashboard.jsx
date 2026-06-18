@@ -11,7 +11,7 @@ export default function Dashboard() {
   const navigate = useNavigate();
 
   const isAdmin = user?.role === 'Admin';
-  const myTasks = isAdmin ? tasks : tasks.filter(t => t.assignedTo === user?.id);
+  const myTasks = isAdmin ? tasks : tasks.filter(t => t.assignedTo === user?.id || t.assignedTo === user?.name);
   const completedTasks = myTasks.filter(t => t.status === 'Completed');
   const pendingTasks = myTasks.filter(t => t.status !== 'Completed');
   const inProgressTasks = myTasks.filter(t => t.status === 'In Progress');
