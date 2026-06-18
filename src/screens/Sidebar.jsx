@@ -37,7 +37,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
           <Zap className="w-4 h-4 text-white" />
         </div>
         {!collapsed && (
-          <span className="text-slate-100 font-bold text-sm tracking-wide">Nexus CRM</span>
+          <span className="text-slate-100 font-bold text-sm tracking-wide"> CRM</span>
         )}
       </div>
 

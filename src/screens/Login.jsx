@@ -44,7 +44,7 @@ export default function Login() {
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-600 shadow-2xl shadow-indigo-500/30 mb-4">
             <Zap className="w-7 h-7 text-white" />
           </div>
-          <h1 className="text-3xl font-bold text-slate-100">Nexus CRM</h1>
+          <h1 className="text-3xl font-bold text-slate-100"> CRM</h1>
           <p className="text-slate-400 mt-1 text-sm">Sign in to your workspace</p>
         </div>
 
